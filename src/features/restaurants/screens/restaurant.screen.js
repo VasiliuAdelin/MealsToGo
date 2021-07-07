@@ -5,20 +5,19 @@ import { RestaurantInfoCard } from "../components/restaurant-info-card.component
 import styled from "styled-components/native";
 
 const SearchContainer = styled.View`
-  padding: 16px;
-  background-color: red;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 const ListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: blue;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  ${StatusBar.currentHeight &&
-  `margin-top :  ${StatusBar.currentHeight}px`}//applying statusBar.currentHeight only if it is not 0
+  ${StatusBar.currentHeight && `margin-top :  ${StatusBar.currentHeight}px`}
 `;
 
 export const RestaurantsScreen = () => (
